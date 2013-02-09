@@ -21,11 +21,11 @@ int main(int argc, char **argv)
 	importGetData		getData;
 	importGetDllVersion	getDllVersion;
 	importReportID		reportID;
-    importProvider		provider;
+	importProvider		provider;
 
     // create variables for exchanging data with the dll
-	FreeTrackData	data;
-	FreeTrackData	*pData;
+	FreeTrackData		data;
+	FreeTrackData		*pData;
 	pData =			&data;
 	char			*pDllVersion;
 	int name =		453;
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 
 	// get function pointers
 	getData			= (importGetData)GetProcAddress(hinstLib, "FTGetData");
-	getDllVersion	= (importGetDllVersion)GetProcAddress(hinstLib, "FTGetDllVersion");
+	getDllVersion		= (importGetDllVersion)GetProcAddress(hinstLib, "FTGetDllVersion");
 	reportID		= (importReportID)GetProcAddress(hinstLib, "FTReportName");
 	provider		= (importProvider)GetProcAddress(hinstLib, "FTProvider");
 
