@@ -1,4 +1,4 @@
-A simple command line application which reads the data from FreeTrack using the FreeTrackClient.dll interface.
+A simple command line application which reads the data from FreeTrack using the FreeTrackClient.dll interface. This is the example which ships with the FreeTrack SDK, but here it has been fixed to compile under Visual C++ 2010 and run on Windows 8.
 
 Assumes that a copy of the FreeTrackClient.dll is in the same folder, though this does not necessarily have to be the same folder as the FreeTrack application itself.
 
