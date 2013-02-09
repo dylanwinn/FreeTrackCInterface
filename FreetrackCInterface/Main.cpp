@@ -28,7 +28,6 @@ int main(int argc, char **argv)
 	FreeTrackData		*pData;
 	pData =			&data;
 	char			*pDllVersion;
-	int name =		453;
 	char			*pProvider;
 
 	// load DLL file
