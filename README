@@ -1,0 +1,15 @@
+/************************************************************************
+ *  freetrack_c_interface.c
+ *	
+ *  A simple command line application which reads the data from FreeTrack
+ *	using the FreeTrackClient.dll interface.
+ *
+ *	Assumes that a copy of the FreeTrackClient.dll is in the same folder,
+ *	thought this does not necessarily have to be the same folder as the 
+ *	FreeTrack application itself.
+ *
+ *	Based on code from http://en.wikipedia.org/wiki/Dynamic-link_library
+ *
+ *	Based on code Copyright Alastair Moore, December 2007
+ *
+ ************************************************************************/
