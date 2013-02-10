@@ -23,12 +23,12 @@ int main(int argc, char **argv)
 	importReportID		reportID;
 	importProvider		provider;
 
-    // create variables for exchanging data with the dll
+	// create variables for exchanging data with the dll
 	FreeTrackData		data;
 	FreeTrackData		*pData;
-	pData =			&data;
-	char			*pDllVersion;
-	char			*pProvider;
+	pData =				&data;
+	char				*pDllVersion;
+	char				*pProvider;
 
 	// load DLL file
 	HINSTANCE hinstLib = LoadLibrary("FreeTrackClient.dll");
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 
 	// get function pointers
 	getData			= (importGetData)GetProcAddress(hinstLib, "FTGetData");
-	getDllVersion		= (importGetDllVersion)GetProcAddress(hinstLib, "FTGetDllVersion");
+	getDllVersion	= (importGetDllVersion)GetProcAddress(hinstLib, "FTGetDllVersion");
 	reportID		= (importReportID)GetProcAddress(hinstLib, "FTReportName");
 	provider		= (importProvider)GetProcAddress(hinstLib, "FTProvider");
 
@@ -85,9 +85,9 @@ int main(int argc, char **argv)
 		if (getData(pData)) {
 			system("cls"); // clear screen
 			printf("Record ID: %d\n" , data.dataID);
-			printf("Yaw: %5.2f\n" , data.yaw * 100);
-			printf("Pitch: %5.2f\n" , data.pitch * 100);
-			printf("Roll: %5.2f\n" , data.roll * 100);
+			printf("Yaw: %5.2f\n" , data.yaw);
+			printf("Pitch: %5.2f\n" , data.pitch);
+			printf("Roll: %5.2f\n" , data.roll);
 			printf("X: %5.2f\n" , data.x );
 			printf("Y: %5.2f\n" , data.y );
 			printf("Z: %5.2f\n" , data.z );
